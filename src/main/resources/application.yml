@@ -1,0 +1,8 @@
+## YAML Template.
+---
+
+server: 
+    port: 9546
+    servlet:
+        context-path: /apptienda
+        
