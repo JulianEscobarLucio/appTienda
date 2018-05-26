@@ -3,12 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>co.com.poli.appTienda</groupId>
-	<artifactId>AppTienda</artifactId>
+	<groupId>co.com.poli</groupId>
+	<artifactId>appTienda</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>AppTienda</name>
+	<name>demo2</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>

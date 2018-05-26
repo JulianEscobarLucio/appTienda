@@ -2,6 +2,8 @@
 package co.com.poli.appTienda.data;
 import co.com.poli.appTienda.model.Movimiento;
 import co.com.poli.appTienda.model.Producto;
+import co.com.poli.appTienda.model.TipoMovimiento;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -14,7 +16,7 @@ public class MovimientoData {
            { 
                 
             add(new Movimiento("100", new Producto("102", "Tenis", 0D, 0D), 
-                    5D, 20000D, Movimiento.TipoMovimiento.entrada));
+                    5D, 20000D, TipoMovimiento.entrada));
     
            }
        };

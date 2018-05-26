@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.poli.appTienda.dao.Impl;
+package co.com.poli.appTienda.dao.impl;
 
 import co.com.poli.appTienda.dao.IProductoDao;
 import co.com.poli.appTienda.data.ProductoData;
@@ -47,7 +47,7 @@ public class ProductoDaoImpl implements IProductoDao{
     public String eliminarProducto(String id) {
         String respuesta = "Producto Eliminado";
         List<Producto> listado = ProductoData.getListaProductos();
-        Producto producto = new  Producto(id, "", 0D, 0D);
+        Producto producto = ObtenerProducto(id);
         listado.remove(producto);
         ProductoData.setListaProductos(listado);
         return respuesta;
@@ -56,8 +56,9 @@ public class ProductoDaoImpl implements IProductoDao{
     @Override
     public String modificarProducto(Producto producto) {
         String respuesta = "Producto Modificado";
+        Producto productoConsulta = ObtenerProducto(producto.getIdproducto());
         List<Producto> listado = ProductoData.getListaProductos();
-        listado.set(listado.indexOf(producto), producto);
+        listado.set(listado.indexOf(productoConsulta), producto);
         ProductoData.setListaProductos(listado);
         return respuesta;
     }

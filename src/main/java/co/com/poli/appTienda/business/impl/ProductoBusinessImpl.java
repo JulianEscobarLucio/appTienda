@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.poli.appTienda.business.Impl;
+package co.com.poli.appTienda.business.impl;
 
 import co.com.poli.appTienda.business.IProductoBusiness;
 import co.com.poli.appTienda.dao.IProductoDao;
@@ -24,7 +24,7 @@ public class ProductoBusinessImpl implements IProductoBusiness{
     }
 
     @Override
-    public Producto ObtenerProducto(String id) {
+    public Producto obtenerProducto(String id) {
       return  productoDao.ObtenerProducto(id);
     }
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.com.poli.appTienda.dao.Impl;
+package co.com.poli.appTienda.dao.impl;
 
 import co.com.poli.appTienda.dao.IMovimientoDao;
 import co.com.poli.appTienda.data.MovimientoData;
@@ -48,8 +48,8 @@ public class MovimientoDaoImpl implements IMovimientoDao{
     public String eliminarMovimiento(String id) {
         String respuesta = "Movimiento Eliminado";
         List<Movimiento> listado = MovimientoData.getListaMovimientos();
-        Movimiento movimiento = new Movimiento("100", new Producto("102", "Tenis", 0D, 0D), 
-                    5D, 20000D, Movimiento.TipoMovimiento.entrada);
+        
+        Movimiento movimiento = ObtenerMovimiento(id);
         listado.remove(movimiento);
         MovimientoData.setListaMovimientos(listado);
         return respuesta;       
@@ -59,8 +59,10 @@ public class MovimientoDaoImpl implements IMovimientoDao{
     public String modificarMovimiento(Movimiento movimiento) {
         String respuesta = "Movimiento Modificado";
         List<Movimiento> listado = MovimientoData.getListaMovimientos();
-        listado.set(listado.indexOf(movimiento), movimiento);
+        Movimiento movimientoConsulta = ObtenerMovimiento(movimiento.getIdMovimiento());
+        listado.set(listado.indexOf(movimientoConsulta), movimiento);
         MovimientoData.setListaMovimientos(listado);
-        return respuesta;    }
+        return respuesta;    
+     }
     
 }

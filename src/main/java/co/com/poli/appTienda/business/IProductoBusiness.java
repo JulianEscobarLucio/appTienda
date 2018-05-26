@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface IProductoBusiness {
     List<Producto> obtenerProductos();
-    Producto ObtenerProducto(String id);
+    Producto obtenerProducto(String id);
     String crearProducto(Producto producto);
     String eliminarProducto(String id);
     String modificarProducto(Producto producto);

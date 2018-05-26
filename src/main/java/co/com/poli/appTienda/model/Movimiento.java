@@ -69,9 +69,5 @@ public class Movimiento {
         this.tipoMovmiento = tipoMovmiento;
     }  
     
-    public enum TipoMovimiento{
-        entrada, salida
-    }
-    
     
 }

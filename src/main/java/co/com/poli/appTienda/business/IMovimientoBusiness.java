@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface IMovimientoBusiness {
     List<Movimiento> obtenerMovimientos();
-    Movimiento ObtenerMovimiento(String id);
+    Movimiento obtenerMovimiento(String id);
     String crearMovimiento(Movimiento movimiento);
     String eliminarMovimiento(String id);
     String modificarMovimiento(Movimiento movimiento);  
